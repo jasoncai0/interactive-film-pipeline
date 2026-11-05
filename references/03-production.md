@@ -26,6 +26,7 @@
 ### 遮挡特写的写法
 
 - **写清画外有什么**：只写「手指翻页」，模型仍会把参考图里的整张脸放进构图。要写死「frame contains just the hands, forearms and pages; head, face, chin, neck and shoulders entirely outside the frame」，书页写「blank or blurred illegible ink smudges」。
+- **只拍局部的镜头也会被补出人脸**：模型会按参考图补一张脸，没给参考图也会补一个像主角的脸。只拍手、旗这类局部时，写死「every person's head and face is entirely outside the frame; no helmet, no head, no shoulders, no other soldiers in the foreground」；背影写「the top edge of the frame cuts across his shoulders」。
 - **背影重出**：参考图仍是带脸的定妆图时，提示词写「references for costume and location only」，机位写「camera directly behind him, face turned fully away」，尾帧用首帧作参考锁构图；首尾帧审过再出视频，低清抽帧确认全程不转头再出高清。
 - **零补拍收尾**：近景露脸的收尾镜头，可以用前一镜末帧做定格缓推顶替，音轨沿用原镜环境声，起点不动。
 - **返修前读原节点的真实输入**：有的镜头首帧直接用了设定图，没有「帧-<镜号>-首」节点，按命名规则猜会找不到。
